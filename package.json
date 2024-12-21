@@ -21,7 +21,7 @@
     "dev": "nodemon index.ts",
     "build": "tsc",
     "start": "nodemon dist/index.js",
-    "stripe": "stripe listen --forward-to https://rest-mern-backend-1.onrender.com/api/v1/order/webhook"
+    "stripe": "stripe listen --forward-to localhost:3000/api/v1/order/webhook"
   },
   "keywords": [],
   "author": "",

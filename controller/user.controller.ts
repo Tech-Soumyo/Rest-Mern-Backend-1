@@ -296,7 +296,7 @@ export const updateProfile = async (
     const userId = req.id;
     const { fullName, email, address, city, country, profilePicture } =
       req.body;
-
+    console.log(req.body);
     let cloudResponse = await cloudinary.uploader.upload(profilePicture);
 
     const updatedData = {

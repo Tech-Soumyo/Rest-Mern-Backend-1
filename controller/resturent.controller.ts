@@ -57,6 +57,8 @@ export const getRestaurant = async (
     const restaurant = await Restaurant.findOne({ user: req.id }).populate(
       "menus"
     );
+    console.log(restaurant);
+    console.log(req.id);
     if (!restaurant) {
       res.status(404).json({
         success: false,

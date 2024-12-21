@@ -38,10 +38,10 @@ try {
   // app.use(express.json());
   app.use("/api/v1/order", express.json(), orderRoute);
 
-  // app.use(express.static(path.join(DIRNAME, "/client/dist")));
-  // app.use("*", (_, res) => {
-  //   res.sendFile(path.resolve(DIRNAME, "client", "dist", "index.html"));
-  // });
+  app.use(express.static(path.join(DIRNAME, "/client/dist")));
+  app.use("*", (_, res) => {
+    res.sendFile(path.resolve(DIRNAME, "client", "dist", "index.html"));
+  });
 
   app.listen(PORT, () => {
     connectDB();
